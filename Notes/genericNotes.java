@@ -1,7 +1,7 @@
-package Practice.Generics;
+package Notes;
 import java.util.*;
 
-public class genericPractice {
+public class genericNotes {
     public static void main(String[] args) {
         List<Integer> ints = Arrays.asList(5,10,3);
         List<Double> doubles = Arrays.asList(1.5,9.2,4.1);
