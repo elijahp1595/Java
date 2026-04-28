@@ -7,6 +7,7 @@ public class genericPractice {
         List<Number> numbers = new ArrayList<>();
         List<Object> objects = new ArrayList<>();
 
+        // This is a test to push to github
 
         addInts(numbers);
         addInts(objects);

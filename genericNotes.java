@@ -6,8 +6,7 @@ public class genericNotes {
         List<Double> doubles = Arrays.asList(1.5,2.5,3.5);
         List<String> Strings = Arrays.asList("Hello World!", "Hello Elijah", "Hello Ada Wong");
 
-
-
+        
         printList(ints);
         printList(doubles);
         printList(Strings);
