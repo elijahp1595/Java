@@ -3,37 +3,35 @@ import java.util.*;
 
 public class genericPractice {
     public static void main(String[] args) {
-        List<Integer> ints = Arrays.asList(1,2,3);
-        List<Double> doubles = Arrays.asList(1.5,2.5);
-
+        List<Integer> ints = Arrays.asList(-9,-5,-20);
         List<Number> numbers = new ArrayList<>();
-        List<Object> objects = new ArrayList<>();
 
-        printNumbers(ints);
-        printNumbers(doubles);
-        addInts(numbers);
-        addInts(objects);
+        copy(ints, numbers); // this takes in ints for the input source and the destination here is numbers
 
+        System.out.println(numbers);
+
+        System.out.println(max(numbers)); // This prints out the largest number in the list
 
     }
 
-    public static void printNumbers(List<? extends Number> list) {
-        // Loop and print each number
-        for (Number n : list) {
-            System.out.println("Here is your number: " + n);
+    public static <T> void copy(List<? extends T> src, List<? super T> dest) {
+        for (T item : src) {
+            dest.add(item); // this adds numbers or items to the destination which is numbers. look above at copy in main for reference
         }
     }
     
-    public static void addInts(List<? super Integer> list) {
-        // add 10 and 20
-        list.add(10);
-        list.add(20);
-        // Loop and print each element
-        for (Object n : list) {
-            System.out.println(n);
+    // src uses extends because we read from it.
+    // dest uses super because we write into it.
+    public static double max(List<? extends Number> list) {
+        double largestNum = Double.NEGATIVE_INFINITY; // This sets largestNum to the lowest initial value
+        for (Number n : list) { // This iterates through each element in the list
+            if (n.doubleValue() > largestNum) {
+                largestNum = n.doubleValue(); // .doubleValue() converts numbers into a double
+            }
         }
-
+        return largestNum;
     }
+    
   
    
 }
