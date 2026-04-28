@@ -1,4 +1,4 @@
-package Practice;
+package Practice.Generics;
 import java.util.*;
 
 public class genericPractice {
