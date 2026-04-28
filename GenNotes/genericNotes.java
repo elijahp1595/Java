@@ -1,4 +1,4 @@
-package Notes;
+package GenNotes; // package name MUST match folder structure
 import java.util.*;
 
 public class genericNotes {
@@ -15,7 +15,6 @@ public class genericNotes {
     /* This public static <T extends Number> means
     “I am creating a type variable called T”
     “T must be a Number or subclass of Number” 
-    
     <T extends Number> = define type T
     extends is used to RESTRICT the type AND allow access to methods
     T = use that type               */
